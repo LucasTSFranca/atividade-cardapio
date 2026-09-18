@@ -1,0 +1,911 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ali->Mente - Cardápio Digital</title>
+    <!-- Bootstrap 5 CSS CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap Icons CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/style.css">
+    
+</head>
+
+<body style="background-color: #FFF8E7; color: #2D2D2D;">
+<!--navbar-->
+    <header class="sticky-top shadow-sm" style="background-color: #2E5D3B;">
+        <nav class="navbar navbar-expand-lg navbar-dark container py-3">
+            <div class="container-fluid">
+<!-- logo -->
+                <a class="navbar-brand d-flex align-items-center fw-bold fs-4" href="#" style="color: #FFF8E7;">
+                    <i class="bi bi-shop me-2" style="color: #E67E22;"></i> Ali->Mente
+                </a>
+
+<!-- botão oculto para os itens da nav -->
+                <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false"
+                    aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+<!-- menu da nav-->
+                <div class="collapse navbar-collapse justify-content-between" id="navbarNav">
+                    <ul class="navbar-nav mx-auto mb-2 mb-lg-0 gap-3 fw-semibold">
+                        <li class="nav-item">
+                            <a class="nav-link" id="item-nav" href="#">Início</a>
+                        </li>
+                        <li class="nav-item">
+                            <a id="item-nav" class="nav-link" href="#cardapio">Cardápio</a>
+                        </li>
+                        <li class="nav-item">
+                            <a id="item-nav" class="nav-link" href="#contato">Contato</a>
+                        </li>
+                    </ul>
+
+<!-- botões da direita -->
+                    <div class="d-flex align-items-center gap-3 mt-3 mt-lg-0">
+                        <a href="#carrinho" class="btn position-relative text-white border-0"
+                            style="background-color: #7BAE7F;">
+                            <i class="bi bi-cart3 fs-5"></i>
+                            <span
+                                class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
+                                3
+                            </span>
+                        </a>
+                        <button type="button" class="btn fw-semibold px-4 text-white"
+                            style="background-color: #E67E22;">
+                            Entrar
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+<!-- carrosel -->
+        <section class="container my-4">
+            <div id="carrosel" class="carousel slide shadow rounded-4 overflow-hidden" data-bs-ride="carousel">
+                <div class="carousel-indicators">
+                    <button type="button" data-bs-target="#carrosel" data-bs-slide-to="0" class="active"
+                        aria-current="true" aria-label="Slide 1"></button>
+                    <button type="button" data-bs-target="#carrosel" data-bs-slide-to="1"
+                        aria-label="Slide 2"></button>
+                    <button type="button" data-bs-target="#carrosel" data-bs-slide-to="2"
+                        aria-label="Slide 3"></button>
+                </div>
+<!-- Banner 1-->
+                <div class="carousel-inner">
+                    <!-- Banner 1 -->
+                    <div class="carousel-item active" style="height: 480px;">
+                        <img src="https://images.unsplash.com/photo-1544025162-d76694265947?q=80&w=1200&auto=format&fit=crop"
+                            class="d-block w-100 h-100 object-fit-cover" alt="Filé com Batatas">
+
+<!-- card com opacidade pro banner(Revisar dps)-->
+                        <div
+                            class="carousel-caption d-flex flex-column justify-content-center align-items-start h-100 bg-dark bg-opacity-50 p-5 rounded-4">
+                            <span class="badge mb-2 px-3 py-2 fs-6 text-white"
+                                style="background-color: #E67E22;">Destaque do Chef</span>
+                            <h1 class="display-5 fw-bold text-white mb-2">Filé Rústico com Batatas</h1>
+                            <p class="lead text-white-50 mb-3">Filé mignon suculento acompanhado de batatas rústicas
+                                douradas ao alecrim fresco.</p>
+                            <h3 class="text-white fw-bold mb-3">R$ 68,90</h3>
+                            <a href="#cardapio" class="btn btn-lg text-white fw-semibold px-4 rounded-pill"
+                                style="background-color: #2E5D3B;">Fazer Pedido</a>
+                        </div>
+                    </div>
+<!-- Banner 2 -->
+                    <div class="carousel-item" style="height: 480px;">
+                        <img src="https://images.unsplash.com/photo-1513104890138-7c749659a591?q=80&w=1200&auto=format&fit=crop"
+                            class="d-block w-100 h-100 object-fit-cover" alt="Pizza Especial">
+
+<!-- card com opacidade pro banner(Revisar dps)-->
+                        <div
+                            class="carousel-caption d-flex flex-column justify-content-center align-items-start h-100 bg-dark bg-opacity-50 p-5 rounded-4">
+                            <span class="badge mb-2 px-3 py-2 fs-6 text-white" style="background-color: #E67E22;">Forno
+                                a Lenha</span>
+                            <h2 class="display-5 fw-bold text-white mb-2">Pizza Especial</h2>
+                            <p class="lead text-white-50 mb-3">Massa fermentada natural, molho de tomates frescos,
+                                manjericão e mozzarella de búfala.</p>
+                            <h3 class="text-white fw-bold mb-3">R$ 59,00</h3>
+                            <a href="#cardapio" class="btn btn-lg text-white fw-semibold px-4 rounded-pill"
+                                style="background-color: #2E5D3B;">Ver Cardápio</a>
+                        </div>
+                    </div>
+<!-- Banner 3 -->
+                    <div class="carousel-item" style="height: 480px;">
+                        <img src="assets/img/brownieBanner.jpg"
+                            class="d-block w-100 h-100 object-fit-cover" alt="Sobremesa Brownie">
+<!-- card com opacidade pro banner(Revisar dps)-->
+                        <div
+                            class="carousel-caption d-flex flex-column justify-content-center align-items-start h-100 bg-dark bg-opacity-50 p-5 rounded-4">
+                            <span class="badge mb-2 px-3 py-2 fs-6 text-white" style="background-color: #C94C4C;">Doce
+                                Conforto</span>
+                            <h2 class="display-5 fw-bold text-white mb-2">Brownie com Sorvete</h2>
+                            <p class="lead text-white-50 mb-3">Brownie artesanal de cacau 70% servido aquecido com
+                                sorvete artesanal de baunilha.</p>
+                            <h3 class="text-white fw-bold mb-3">R$ 24,90</h3>
+                            <a href="#cardapio" class="btn btn-lg text-white fw-semibold px-4 rounded-pill"
+                                style="background-color: #2E5D3B;">Fazer Pedido</a>
+                        </div>
+                    </div>
+                </div>
+<!--Botões de proximo e anterior do bannerr-->
+                <button class="carousel-control-prev" type="button" data-bs-target="#carrosel" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Anterior</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carrosel" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Próximo</span>
+                </button>
+            </div>
+        </section>
+
+<!-- categoria e pesquisa -->
+        <section class="container my-5" id="cardapio">
+            <div class="text-center mb-4">
+                <h2 class="fw-bold mb-2" style="color: #2E5D3B;">Nosso Cardápio</h2>
+                <p class="text-muted">Pratos preparados com ingredientes frescos, selecionados diretamente de produtores
+                    locais parceiros.</p>
+            </div>
+
+<!-- Botões de Categorias -->
+            <div class="d-flex flex-wrap justify-content-center gap-2 mb-4">
+                <button type="button"  class="btn btn-outline-success active fw-semibold rounded-pill px-4 py-2">Todos</button>
+                <button type="button" class=" btn btn-outline-success rounded-pill px-4 py-2">Pratos</button>
+                <button type="button"  class="btn btn-outline-success rounded-pill px-4 py-2">Sobremesas</button>
+                <button type="button"  class="btn btn-outline-success rounded-pill px-4 py-2">Bebidas</button>
+                <button type="button"  class="btn btn-outline-success rounded-pill px-4 py-2">Outros</button>
+            </div>
+
+<!-- search do cardapio -->
+            <div class="row justify-content-center mb-5">
+                <div class="col-12 col-md-8 col-lg-6">
+                    <div class="input-group shadow-sm">
+                        <span class="input-group-text bg-white border-end-0 text-muted">
+                            <i class="bi bi-search"></i>
+                        </span>
+                        <input type="text" class="form-control border-start-0 ps-0"
+                            placeholder="Pesquisar no cardápio...">
+                        <button class="btn text-white px-4" type="button"
+                            style="background-color: #E67E22;">Buscar</button>
+                    </div>
+                </div>
+            </div>
+
+<!-- cardapio -->
+            <div class="row row-cols-1 row-cols-sm-2 row-cols-lg-4 g-4">
+
+<!-- Produto 1 -->
+                <div class="col">
+                    <div class="card h-100 shadow-sm rounded-4 border-0">
+                        <div class="position-relative">
+                            <img src="assets/img/hamburguer.jpg"
+                                class="card-img-top object-fit-cover rounded-top-4" style="height: 200px;"
+                                alt="Hambúrguer artesanal">
+                            <span class="position-absolute top-0 end-0 m-3 badge text-white"
+                                style="background-color: #2E5D3B;">Pratos</span>
+                        </div>
+                        <div class="card-body d-flex flex-column justify-content-between">
+                            <div>
+                                <h5 class="card-title fw-bold text-dark">Hambúrguer Artesanal</h5>
+
+<!--problema na centralização(revisar)-->
+                                <p class="card-text text-muted small mb-3">Blend bovino 180g, queijo cheddar inglês,
+                                    bacon crocante e molho especial da casa.</p>
+                            </div>
+                            <div>
+                                <div class="d-flex justify-content-between align-items-center mb-3">
+                                    <span class="fs-5 fw-bold text-success">R$ 38,90</span>
+                                </div>
+                                <div class="d-flex justify-content-between align-items-center bg-light p-2 rounded-3">
+                                    <div class="btn-group btn-group-sm" role="group">
+<!--botão de menos-->
+                                        <button type="button" class="btn btn-outline-danger"><i
+                                                class="bi bi-dash"></i></button>
+<!--quantidade-->
+                                        <span class="px-3 bg-white d-flex align-items-center fw-bold">1</span>
+<!--botão de mais-->
+                                        <button type="button" class="btn btn-outline-success"><i
+                                                class="bi bi-plus"></i></button>
+                                    </div>
+                                    <button type="button" class="btn btn-sm text-white"
+                                        style="background-color: #E67E22;">
+                                        <i class="bi bi-cart-plus"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+<!-- PIZZA -->
+                <div class="col">
+                    <div class="card h-100 shadow-sm rounded-4 border-0">
+                        <div class="position-relative">
+                            <img src="https://images.unsplash.com/photo-1513104890138-7c749659a591?q=80&w=600&auto=format&fit=crop"
+                                class="card-img-top object-fit-cover rounded-top-4" style="height: 200px;"
+                                alt="Pizza especial">
+                            <span class="position-absolute top-0 end-0 m-3 badge text-white"
+                                style="background-color: #2E5D3B;">Pratos</span>
+                        </div>
+                        <div class="card-body d-flex flex-column justify-content-between">
+                            <div>
+                                <h5 class="card-title fw-bold text-dark">Pizza Especial</h5>
+                                <p class="card-text text-muted small mb-3">Molho rústico, mozzarella de búfala, tomate
+                                    cereja confitado e manjericão fresco.</p>
+                            </div>
+                            <div>
+                                <div class="d-flex justify-content-between align-items-center mb-3">
+                                    <span class="fs-5 fw-bold text-success">R$ 59,00</span>
+                                </div>
+                                <div class="d-flex justify-content-between align-items-center bg-light p-2 rounded-3">
+                                    <div class="btn-group btn-group-sm" role="group">
+                                        <button type="button" class="btn btn-outline-danger"><i
+                                                class="bi bi-dash"></i></button>
+                                        <span class="px-3 bg-white d-flex align-items-center fw-bold">0</span>
+                                        <button type="button" class="btn btn-outline-success"><i
+                                                class="bi bi-plus"></i></button>
+                                    </div>
+                                    <button type="button" class="btn btn-sm text-white"
+                                        style="background-color: #E67E22;">
+                                        <i class="bi bi-cart-plus"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+<!-- filé -->
+                <div class="col">
+                    <div class="card h-100 shadow-sm rounded-4 border-0">
+                        <div class="position-relative">
+                            <img src="https://images.unsplash.com/photo-1544025162-d76694265947?q=80&w=600&auto=format&fit=crop"
+                                class="card-img-top object-fit-cover rounded-top-4" style="height: 200px;"
+                                alt="Filé com batatas">
+                            <span class="position-absolute top-0 end-0 m-3 badge text-white"
+                                style="background-color: #2E5D3B;">Pratos</span>
+                        </div>
+                        <div class="card-body d-flex flex-column justify-content-between">
+                            <div>
+                                <h5 class="card-title fw-bold text-dark">Filé com Batatas</h5>
+                                <p class="card-text text-muted small mb-3">Corte nobre grelhado no ponto certo,
+                                    acompanhado de batatas rústicas com ervas.</p>
+                            </div>
+                            <div>
+                                <div class="d-flex justify-content-between align-items-center mb-3">
+                                    <span class="fs-5 fw-bold text-success">R$ 68,90</span>
+                                </div>
+                                <div class="d-flex justify-content-between align-items-center bg-light p-2 rounded-3">
+                                    <div class="btn-group btn-group-sm" role="group">
+                                        <button type="button" class="btn btn-outline-danger"><i
+                                                class="bi bi-dash"></i></button>
+                                        <span class="px-3 bg-white d-flex align-items-center fw-bold">0</span>
+                                        <button type="button" class="btn btn-outline-success"><i
+                                                class="bi bi-plus"></i></button>
+                                    </div>
+                                    <button type="button" class="btn btn-sm text-white"
+                                        style="background-color: #E67E22;">
+                                        <i class="bi bi-cart-plus"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+<!-- massa -->
+                <div class="col">
+                    <div class="card h-100 shadow-sm rounded-4 border-0">
+                        <div class="position-relative">
+                            <img src="assets/img/massa.jpg"
+                                class="card-img-top object-fit-cover rounded-top-4" style="height: 200px;"
+                                alt="Massa ao molho">
+                            <span class="position-absolute top-0 end-0 m-3 badge text-white"
+                                style="background-color: #2E5D3B;">Pratos</span>
+                        </div>
+                        <div class="card-body d-flex flex-column justify-content-between">
+                            <div>
+                                <h5 class="card-title fw-bold text-dark">Massa ao Molho</h5>
+                                <p class="card-text text-muted small mb-3">Fettuccine artesanal envolto em molho cremoso
+                                    de tomates italianos e parmesão.</p>
+                            </div>
+                            <div>
+                                <div class="d-flex justify-content-between align-items-center mb-3">
+                                    <span class="fs-5 fw-bold text-success">R$ 44,50</span>
+                                </div>
+                                <div class="d-flex justify-content-between align-items-center bg-light p-2 rounded-3">
+                                    <div class="btn-group btn-group-sm" role="group">
+                                        <button type="button" class="btn btn-outline-danger"><i
+                                                class="bi bi-dash"></i></button>
+                                        <span class="px-3 bg-white d-flex align-items-center fw-bold">0</span>
+                                        <button type="button" class="btn btn-outline-success"><i
+                                                class="bi bi-plus"></i></button>
+                                    </div>
+                                    <button type="button" class="btn btn-sm text-white"
+                                        style="background-color: #E67E22;">
+                                        <i class="bi bi-cart-plus"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+<!-- frango -->
+                <div class="col">
+                    <div class="card h-100 shadow-sm rounded-4 border-0">
+                        <div class="position-relative">
+                            <img src="assets/img/frango.avif"
+                                class="card-img-top object-fit-cover rounded-top-4" style="height: 200px;"
+                                alt="Frango grelhado">
+                            <span class="position-absolute top-0 end-0 m-3 badge text-white"
+                                style="background-color: #2E5D3B;">Pratos</span>
+                        </div>
+                        <div class="card-body d-flex flex-column justify-content-between">
+                            <div>
+                                <h5 class="card-title fw-bold text-dark">Frango Grelhado</h5>
+                                <p class="card-text text-muted small mb-3">Peito de frango marinado em ervas finas,
+                                    servido com legumes orgânicos grelhados.</p>
+                            </div>
+                            <div>
+                                <div class="d-flex justify-content-between align-items-center mb-3">
+                                    <span class="fs-5 fw-bold text-success">R$ 36,00</span>
+                                </div>
+                                <div class="d-flex justify-content-between align-items-center bg-light p-2 rounded-3">
+                                    <div class="btn-group btn-group-sm" role="group">
+                                        <button type="button" class="btn btn-outline-danger"><i
+                                                class="bi bi-dash"></i></button>
+                                        <span class="px-3 bg-white d-flex align-items-center fw-bold">0</span>
+                                        <button type="button" class="btn btn-outline-success"><i
+                                                class="bi bi-plus"></i></button>
+                                    </div>
+                                    <button type="button" class="btn btn-sm text-white"
+                                        style="background-color: #E67E22;">
+                                        <i class="bi bi-cart-plus"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+<!-- brownie -->
+                <div class="col">
+                    <div class="card h-100 shadow-sm rounded-4 border-0">
+                        <div class="position-relative">
+                            <img src="assets/img/brownie.jpg"
+                                class="card-img-top object-fit-cover rounded-top-4" style="height: 200px;"
+                                alt="Brownie com sorvete">
+                            <span class="position-absolute top-0 end-0 m-3 badge text-white"
+                                style="background-color: #C94C4C;">Sobremesas</span>
+                        </div>
+                        <div class="card-body d-flex flex-column justify-content-between">
+                            <div>
+                                <h5 class="card-title fw-bold text-dark">Brownie com Sorvete</h5>
+                                <p class="card-text text-muted small mb-3">Brownie denso de chocolate amargo com bola de
+                                    sorvete de baunilha deagascar.</p>
+                            </div>
+                            <div>
+                                <div class="d-flex justify-content-between align-items-center mb-3">
+                                    <span class="fs-5 fw-bold text-success">R$ 24,90</span>
+                                </div>
+                                <div class="d-flex justify-content-between align-items-center bg-light p-2 rounded-3">
+                                    <div class="btn-group btn-group-sm" role="group">
+                                        <button type="button" class="btn btn-outline-danger"><i
+                                                class="bi bi-dash"></i></button>
+                                        <span class="px-3 bg-white d-flex align-items-center fw-bold">1</span>
+                                        <button type="button" class="btn btn-outline-success"><i
+                                                class="bi bi-plus"></i></button>
+                                    </div>
+                                    <button type="button" class="btn btn-sm text-white"
+                                        style="background-color: #E67E22;">
+                                        <i class="bi bi-cart-plus"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+<!-- frutas vermelhas -->
+                <div class="col">
+                    <div class="card h-100 shadow-sm rounded-4 border-0">
+                        <div class="position-relative">
+                            <img src="https://images.unsplash.com/photo-1533134242443-d4fd215305ad?q=80&w=600&auto=format&fit=crop"
+                                class="card-img-top object-fit-cover rounded-top-4" style="height: 200px;"
+                                alt="Cheesecake">
+                            <span class="position-absolute top-0 end-0 m-3 badge text-white"
+                                style="background-color: #C94C4C;">Sobremesas</span>
+                        </div>
+                        <div class="card-body d-flex flex-column justify-content-between">
+                            <div>
+                                <h5 class="card-title fw-bold text-dark">Cheesecake de Frutas Vermelhas</h5>
+                                <p class="card-text text-muted small mb-3">Fatia cremosa com base de biscoito e
+                                    cobertura artesanal de frutas vermelhas.</p>
+                            </div>
+                            <div>
+                                <div class="d-flex justify-content-between align-items-center mb-3">
+                                    <span class="fs-5 fw-bold text-success">R$ 26,00</span>
+                                </div>
+                                <div class="d-flex justify-content-between align-items-center bg-light p-2 rounded-3">
+                                    <div class="btn-group btn-group-sm" role="group">
+                                        <button type="button" class="btn btn-outline-danger"><i
+                                                class="bi bi-dash"></i></button>
+                                        <span class="px-3 bg-white d-flex align-items-center fw-bold">0</span>
+                                        <button type="button" class="btn btn-outline-success"><i
+                                                class="bi bi-plus"></i></button>
+                                    </div>
+                                    <button type="button" class="btn btn-sm text-white"
+                                        style="background-color: #E67E22;">
+                                        <i class="bi bi-cart-plus"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+<!-- Pudim -->
+                <div class="col">
+                    <div class="card h-100 shadow-sm rounded-4 border-0">
+                        <div class="position-relative">
+                            <img src="assets/img/pudim.jpg"
+                                class="card-img-top object-fit-cover rounded-top-4" style="height: 200px;" alt="Pudim">
+                            <span class="position-absolute top-0 end-0 m-3 badge text-white"
+                                style="background-color: #C94C4C;">Sobremesas</span>
+                        </div>
+                        <div class="card-body d-flex flex-column justify-content-between">
+                            <div>
+                                <h5 class="card-title fw-bold text-dark">Pudim de Leite Condensado</h5>
+                                <p class="card-text text-muted small mb-3">Pudim tradicional de textura aveludada com
+                                    calda dourada de caramelo artesanal.</p>
+                            </div>
+                            <div>
+                                <div class="d-flex justify-content-between align-items-center mb-3">
+                                    <span class="fs-5 fw-bold text-success">R$ 18,50</span>
+                                </div>
+                                <div class="d-flex justify-content-between align-items-center bg-light p-2 rounded-3">
+                                    <div class="btn-group btn-group-sm" role="group">
+                                        <button type="button" class="btn btn-outline-danger"><i
+                                                class="bi bi-dash"></i></button>
+                                        <span class="px-3 bg-white d-flex align-items-center fw-bold">0</span>
+                                        <button type="button" class="btn btn-outline-success"><i
+                                                class="bi bi-plus"></i></button>
+                                    </div>
+                                    <button type="button" class="btn btn-sm text-white"
+                                        style="background-color: #E67E22;">
+                                        <i class="bi bi-cart-plus"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+<!-- Torta -->
+                <div class="col">
+                    <div class="card h-100 shadow-sm rounded-4 border-0">
+                        <div class="position-relative">
+                            <img src="https://images.unsplash.com/photo-1606313564200-e75d5e30476c?q=80&w=600&auto=format&fit=crop"
+                                class="card-img-top object-fit-cover rounded-top-4" style="height: 200px;"
+                                alt="Torta de chocolate">
+                            <span class="position-absolute top-0 end-0 m-3 badge text-white"
+                                style="background-color: #C94C4C;">Sobremesas</span>
+                        </div>
+                        <div class="card-body d-flex flex-column justify-content-between">
+                            <div>
+                                <h5 class="card-title fw-bold text-dark">Torta Trufada de Chocolate</h5>
+                                <p class="card-text text-muted small mb-3">Camadas generosas de ganache de chocolate
+                                    meio amargo sobre massa crocante.</p>
+                            </div>
+                            <div>
+                                <div class="d-flex justify-content-between align-items-center mb-3">
+                                    <span class="fs-5 fw-bold text-success">R$ 22,00</span>
+                                </div>
+                                <div class="d-flex justify-content-between align-items-center bg-light p-2 rounded-3">
+                                    <div class="btn-group btn-group-sm" role="group">
+                                        <button type="button" class="btn btn-outline-danger"><i
+                                                class="bi bi-dash"></i></button>
+                                        <span class="px-3 bg-white d-flex align-items-center fw-bold">0</span>
+                                        <button type="button" class="btn btn-outline-success"><i
+                                                class="bi bi-plus"></i></button>
+                                    </div>
+                                    <button type="button" class="btn btn-sm text-white"
+                                        style="background-color: #E67E22;">
+                                        <i class="bi bi-cart-plus"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+<!-- SUCO -->
+                <div class="col">
+                    <div class="card h-100 shadow-sm rounded-4 border-0">
+                        <div class="position-relative">
+                            <img src="assets/img/suco.jpg"
+                                class="card-img-top object-fit-cover rounded-top-4" style="height: 200px;"
+                                alt="Suco natural">
+                            <span class="position-absolute top-0 end-0 m-3 badge text-white"
+                                style="background-color: #7BAE7F;">Bebidas</span>
+                        </div>
+                        <div class="card-body d-flex flex-column justify-content-between">
+                            <div>
+                                <h5 class="card-title fw-bold text-dark">Suco Natural (Laranja/Morango)</h5>
+                                <p class="card-text text-muted small mb-3">Frutas frescas espremidas na hora, sem adição
+                                    de conservantes ou açúcares refinados.</p>
+                            </div>
+                            <div>
+                                <div class="d-flex justify-content-between align-items-center mb-3">
+                                    <span class="fs-5 fw-bold text-success">R$ 10,00</span>
+                                </div>
+                                <div class="d-flex justify-content-between align-items-center bg-light p-2 rounded-3">
+                                    <div class="btn-group btn-group-sm" role="group">
+                                        <button type="button" class="btn btn-outline-danger"><i
+                                                class="bi bi-dash"></i></button>
+                                        <span class="px-3 bg-white d-flex align-items-center fw-bold">1</span>
+                                        <button type="button" class="btn btn-outline-success"><i
+                                                class="bi bi-plus"></i></button>
+                                    </div>
+                                    <button type="button" class="btn btn-sm text-white"
+                                        style="background-color: #E67E22;">
+                                        <i class="bi bi-cart-plus"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+<!-- Coca -->
+                <div class="col">
+                    <div class="card h-100 shadow-sm rounded-4 border-0">
+                        <div class="position-relative">
+                            <img src="https://images.unsplash.com/photo-1622483767028-3f66f32aef97?q=80&w=600&auto=format&fit=crop"
+                                class="card-img-top object-fit-cover rounded-top-4" style="height: 200px;"
+                                alt="Refrigerante">
+                            <span class="position-absolute top-0 end-0 m-3 badge text-white"
+                                style="background-color: #7BAE7F;">Bebidas</span>
+                        </div>
+                        <div class="card-body d-flex flex-column justify-content-between">
+                            <div>
+                                <h5 class="card-title fw-bold text-dark">Refrigerante Lata</h5>
+                                <p class="card-text text-muted small mb-3">Opções tradicionais e zero açúcar geladas
+                                    (350ml).</p>
+                            </div>
+                            <div>
+                                <div class="d-flex justify-content-between align-items-center mb-3">
+                                    <span class="fs-5 fw-bold text-success">R$ 7,00</span>
+                                </div>
+                                <div class="d-flex justify-content-between align-items-center bg-light p-2 rounded-3">
+                                    <div class="btn-group btn-group-sm" role="group">
+                                        <button type="button" class="btn btn-outline-danger"><i
+                                                class="bi bi-dash"></i></button>
+                                        <span class="px-3 bg-white d-flex align-items-center fw-bold">0</span>
+                                        <button type="button" class="btn btn-outline-success"><i
+                                                class="bi bi-plus"></i></button>
+                                    </div>
+                                    <button type="button" class="btn btn-sm text-white"
+                                        style="background-color: #E67E22;">
+                                        <i class="bi bi-cart-plus"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+<!-- MilkShake -->
+                <div class="col">
+                    <div class="card h-100 shadow-sm rounded-4 border-0">
+                        <div class="position-relative">
+                            <img src="https://images.unsplash.com/photo-1572490122747-3968b75cc699?q=80&w=600&auto=format&fit=crop"
+                                class="card-img-top object-fit-cover rounded-top-4" style="height: 200px;"
+                                alt="Milk-shake">
+                            <span class="position-absolute top-0 end-0 m-3 badge text-white"
+                                style="background-color: #7BAE7F;">Bebidas</span>
+                        </div>
+                        <div class="card-body d-flex flex-column justify-content-between">
+                            <div>
+                                <h5 class="card-title fw-bold text-dark">Milk-shake Artesanal</h5>
+                                <p class="card-text text-muted small mb-3">Batido com sorvete cremoso de baunilha, calda de chocolate belga e chantilly.</p>
+                            </div>
+                            <div>
+                                <div class=" d-flex justify-content-between align-items-center mb-3">
+                                    <span class="fs-5 fw-bold text-success">R$ 18,00</span>
+                            </div>
+                            <div class="d-flex justify-content-between align-items-center bg-light p-2 rounded-3">
+                                <div class="btn-group btn-group-sm" role="group">
+                                    <button type="button" class="btn btn-outline-danger"><i
+                                            class="bi bi-dash"></i></button>
+                                    <span class="px-3 bg-white d-flex align-items-center fw-bold">0</span>
+                                    <button type="button" class="btn btn-outline-success"><i
+                                            class="bi bi-plus"></i></button>
+                                </div>
+                                <button type="button" class="btn btn-sm text-white" style="background-color: #E67E22;">
+                                    <i class="bi bi-cart-plus"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            </div>
+        </section>
+
+<!-- cores do carrinho (rREVISAR) -->
+        <section class="container my-5" id="carrinho">
+            <div class="card shadow-sm rounded-4 border-0 p-4" style="background-color: #FFFFFF;">
+                <div class="d-flex align-items-center mb-4">
+                    <i class="bi bi-bag-check fs-3 me-2" style="color: #2E5D3B;"></i>
+                    <h3 class="fw-bold mb-0" style="color: #2E5D3B;">Seu Carrinho de Compras</h3>
+                </div>
+
+<!-- carrinho  -->
+                <div class="table-responsive">
+                    <table class="table align-middle">
+                        <thead class="table-light">
+                            <tr>
+                                <th scope="col">Produto</th>
+                                <th scope="col" class="text-center">Quantidade</th>
+                                <th scope="col" class="text-end">Preço Unitário</th>
+                                <th scope="col" class="text-end">Subtotal</th>
+                                <th scope="col" class="text-center">Ações</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+<!--hamburguer-->
+                            <tr>
+                                <td>
+                                    <div class="d-flex align-items-center">
+                                        <img src="assets/img/hamburguer.jpg"
+                                            class="rounded-3 me-3 object-fit-cover" style="width: 50px; height: 50px;"
+                                            alt="Hambúrguer artesanal">
+                                        <div>
+                                            <h6 class="mb-0 fw-bold">Hambúrguer Artesanal</h6>
+                                            <small class="text-muted">Pratos</small>
+                                        </div>
+                                    </div>
+                                </td>
+<!--botão de menos-->
+                                <td class="text-center">
+                                    <div class="btn-group btn-group-sm" role="group">
+                                        <button type="button" class="btn btn-outline-success"><i
+                                                class="bi bi-dash"></i></button>
+                                        <span
+                                            class="px-3 bg-white d-flex align-items-center fw-bold border border-secondary border-opacity-25">1</span>
+<!--botão de mais-->
+                                        <button type="button" class="btn btn-outline-danger"><i
+                                                class="bi bi-plus"></i></button>
+                                    </div>
+                                </td>
+                                <td class="text-end">R$ 38,90</td>
+                                <td class="text-end fw-bold">R$ 38,90</td>
+                                <td class="text-center">
+                                    <button type="button" class="btn btn-sm btn-outline-danger border-0"><i
+                                            class="bi bi-trash fs-5"></i></button>
+                                </td>
+                            </tr>
+<!-- brownie -->
+                            <tr>
+                                <td>
+                                    <div class="d-flex align-items-center">
+                                        <img src="assets/img/brownieBanner.jpg"
+                                            class="rounded-3 me-3 object-fit-cover" style="width: 50px; height: 50px;"
+                                            alt="Brownie com sorvete">
+                                        <div>
+                                            <h6 class="mb-0 fw-bold">Brownie com Sorvete</h6>
+                                            <small class="text-muted">Sobremesas</small>
+                                        </div>
+                                    </div>
+                                </td>
+<!--botão de menos-->
+                                <td class="text-center">
+                                    <div class="btn-group btn-group-sm" role="group">
+                                        <button type="button" class="btn btn-outline-success"><i
+                                                class="bi bi-dash"></i></button>
+                                        <span
+                                            class="px-3 bg-white d-flex align-items-center fw-bold border border-secondary border-opacity-25">1</span>
+<!--botão de mais-->
+                                        <button type="button" class="btn btn-outline-danger"><i
+                                                class="bi bi-plus"></i></button>
+                                    </div>
+                                </td>
+                                <td class="text-end">R$ 24,90</td>
+                                <td class="text-end fw-bold">R$ 24,90</td>
+                                <td class="text-center">
+                                    <button type="button" class="btn btn-sm btn-outline-danger border-0"><i
+                                            class="bi bi-trash fs-5"></i></button>
+                                </td>
+                            </tr>
+<!-- suco -->
+                            <tr>
+                                <td>
+                                    <div class="d-flex align-items-center">
+                                        <img src="assets/img/suco.jpg"
+                                            class="rounded-3 me-3 object-fit-cover" style="width: 50px; height: 50px;"
+                                            alt="Suco natural">
+                                        <div>
+                                            <h6 class="mb-0 fw-bold">Suco Natural</h6>
+                                            <small class="text-muted">Bebidas</small>
+                                        </div>
+                                    </div>
+                                </td>
+<!--botão de menos-->
+                                <td class="text-center">
+                                    <div class="btn-group btn-group-sm" role="group">
+                                        <button type="button" class="btn btn-outline-success"><i
+                                                class="bi bi-dash"></i></button>
+                                        <span
+                                            class="px-3 bg-white d-flex align-items-center fw-bold border border-secondary border-opacity-25">1</span>
+<!--botão de mais-->
+                                        <button type="button" class="btn btn-outline-danger"><i
+                                                class="bi bi-plus"></i></button>
+                                    </div>
+                                </td>
+                                <td class="text-end">R$ 10,00</td>
+                                <td class="text-end fw-bold">R$ 10,00</td>
+                                <td class="text-center">
+                                    <button type="button" class="btn btn-sm btn-outline-danger border-0"><i
+                                            class="bi bi-trash fs-5"></i></button>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+<!-- card com calculo e total da compra -->
+                <div class="row justify-content-end mt-4">
+                    <div class="col-12 col-md-5 col-lg-4">
+                        <div class="p-3 bg-light rounded-4">
+                            <div class="d-flex justify-content-between mb-2">
+                                <span class="text-muted">Subtotal</span>
+                                <span class="fw-semibold">R$ 73,80</span>
+                            </div>
+                            <div class="d-flex justify-content-between mb-2">
+                                <span class="text-muted">Taxa de Entrega</span>
+                                <span class="fw-semibold">R$ 8,00</span>
+                            </div>
+                            <hr>
+                            <div class="d-flex justify-content-between mb-3">
+                                <span class="fw-bold fs-5" style="color: #2E5D3B;">Total</span>
+                                <span class="fw-bold fs-5 text-success">R$ 81,80</span>
+                            </div>
+                            <button type="button" class="btn w-100 py-2 text-white fw-semibold rounded-pill"
+                                style="background-color: #E67E22;">
+                                Finalizar Pedido
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+<!-- contato -->
+        <section class="container my-5" id="contato">
+            <div class="row align-items-center g-4">
+                <div class="col-12 col-lg-6">
+                    <h2 class="fw-bold mb-3" style="color: #2E5D3B;">Precisa de ajuda?</h2>
+                    <p class="text-muted mb-4">Entre em contato pelos nossos canais oficiais ou visite nossa casa.</p>
+
+                    <div class="d-flex flex-column gap-3">
+                        <div class="d-flex align-items-center">
+                            <div class="p-3 rounded-circle text-white me-3" style="background-color: #2E5D3B;">
+                                <i class="bi bi-telephone fs-5"></i>
+                            </div>
+                            <div>
+<!--lembrar muted deixa opaco-->
+                                <span class="d-block text-muted small">Telefone</span>
+                                <span class="fw-semibold">(81) 4002-8922</span>
+                            </div>
+                        </div>
+
+                        <div class="d-flex align-items-center">
+                            <div class="p-3 rounded-circle text-white me-3" style="background-color: #7BAE7F;">
+                                <i class="bi bi-whatsapp fs-5"></i>
+                            </div>
+                            <div>
+                                <span class="d-block text-muted small">WhatsApp</span>
+                                <span class="fw-semibold">(81) 3628-0973</span>
+                            </div>
+                        </div>
+
+                        <div class="d-flex align-items-center">
+                            <div class="p-3 rounded-circle text-white me-3" style="background-color: #E67E22;">
+                                <i class="bi bi-envelope fs-5"></i>
+                            </div>
+                            <div>
+                                <span class="d-block text-muted small">E-mail</span>
+                                <span class="fw-semibold">contato@alimente.com.br</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+<!--card para atendimento-->
+                <div class="col-12 col-lg-6">
+                    <div class="card shadow-sm rounded-4 border-0 p-4" style="background-color: #FFFFFF;">
+                        <h4 class="fw-bold mb-3" style="color: #2E5D3B;">Informações de Atendimento</h4>
+                        <ul class="list-unstyled mb-4">
+                            <li class="d-flex align-items-start mb-3">
+                                <i class="bi bi-clock fs-5 me-3 text-warning"></i>
+                                <div>
+                                    <span class="fw-bold d-block">Horário de Funcionamento</span>
+                                    <span class="text-muted small">Terça a Domingo: das 11:30 à 01:00</span>
+                                </div>
+                            </li>
+                            <li class="d-flex align-items-start">
+                                <i class="bi bi-geo-alt fs-5 me-3 text-danger"></i>
+                                <div>
+                                    <span class="fw-bold d-block">Endereço</span>
+                                    <span class="text-muted small">Av. ETE - Limoeiro-PE</span>
+                                </div>
+                            </li>
+                        </ul>
+                        <button type="button" class="btn text-white fw-semibold py-2 rounded-pill"
+                            style="background-color: #2E5D3B;">
+                            Entre em Contato
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+<!-- footer da pagina (ainda em ajustes) ->() -->
+    <footer class="text-white pt-5 pb-3 mt-5" style="background-color: #2E5D3B;">
+        <div class="container">
+            <div class="row g-4 mb-4">
+<!-- Coluna 1: Sobre -->
+                <div class="col-12 col-md-4">
+                    <h5 class="fw-bold mb-3 d-flex align-items-center" style="color: #FFF8E7;">
+                        <i class="bi bi-shop me-2" style="color: #E67E22;"></i> Ali->mente
+                    </h5>
+                    <p class="text-white-50 small mb-3">Gastronomia moderna unindo alimentos frescos, conforto e o
+                        aconchego de receitas feitas com dedicação e excelência.</p>
+                    <div class="d-flex gap-3 fs-5">
+                        <a href="#" class="text-white"><i class="bi bi-instagram"></i></a>
+                        <a href="#" class="text-white"><i class="bi bi-facebook"></i></a>
+                        <a href="#" class="text-white"><i class="bi bi-whatsapp"></i></a>
+                    </div>
+                </div>
+
+<!-- Links -->
+                <div class="col-6 col-md-4">
+                    <h6 class="fw-bold mb-3 text-uppercase" style="color: #FFF8E7;">Links Rápidos</h6>
+                    <ul class="list-unstyled d-flex flex-column gap-2">
+                        <li><a href="#" class="text-white-50 text-decoration-none">Início</a></li>
+                        <li><a href="#cardapio" class="text-white-50 text-decoration-none">Cardápio</a></li>
+                        <li><a href="#carrinho" class="text-white-50 text-decoration-none">Carrinho</a></li>
+                        <li><a href="#contato" class="text-white-50 text-decoration-none">Contato</a></li>
+                    </ul>
+                </div>
+
+<!-- Atendimento -->
+                <div class="col-6 col-md-4">
+                    <h6 class="fw-bold mb-3 text-uppercase" style="color: #FFF8E7;">Atendimento</h6>
+                    <p class="text-white-50 small mb-1"><i class="bi bi-telephone me-2"></i> (81) 3456-7890</p>
+                    <p class="text-white-50 small mb-1"><i class="bi bi-envelope me-2"></i> contato@alimente.com.br
+                    </p>
+                    <p class="text-white-50 small"><i class="bi bi-clock me-2"></i> Ter-Dom: 11h30 - 23h00</p>
+                </div>
+            </div>
+
+            <hr class="border-secondary opacity-50">
+        </div>
+    </footer>
+<!--ENtretenimentoooo-->
+    <audio id="musica" class="fixed-bottom w-100 h-05" controls autoplay></audio>
+
+    <script src="/assets/js/musicas.js" defer></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>

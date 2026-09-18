@@ -1,0 +1,9 @@
+#item-nav:hover{
+    color: rgb(252, 252, 252);
+}
+
+#item-nav:focus{
+    color: orange;
+}
+
+
