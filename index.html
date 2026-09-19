@@ -154,11 +154,11 @@
 
 <!-- Botões de Categorias -->
             <div class="d-flex flex-wrap justify-content-center gap-2 mb-4">
-                <button type="button"  class="btn btn-outline-success active fw-semibold rounded-pill px-4 py-2">Todos</button>
-                <button type="button" class=" btn btn-outline-success rounded-pill px-4 py-2">Pratos</button>
-                <button type="button"  class="btn btn-outline-success rounded-pill px-4 py-2">Sobremesas</button>
-                <button type="button"  class="btn btn-outline-success rounded-pill px-4 py-2">Bebidas</button>
-                <button type="button"  class="btn btn-outline-success rounded-pill px-4 py-2">Outros</button>
+                <button type="button" class="btn btn-outline-success categoria-btn active fw-semibold rounded-pill px-4 py-2">Todos</button>
+                <button type="button" class="btn btn-outline-success categoria-btn rounded-pill px-4 py-2">Pratos</button>
+                <button type="button" class="btn btn-outline-success categoria-btn rounded-pill px-4 py-2">Sobremesas</button>
+                <button type="button" class="btn btn-outline-success categoria-btn rounded-pill px-4 py-2">Bebidas</button>
+                <button type="button" class="btn btn-outline-success categoria-btn rounded-pill px-4 py-2">Outros</button>
             </div>
 
 <!-- search do cardapio -->
@@ -168,9 +168,9 @@
                         <span class="input-group-text bg-white border-end-0 text-muted">
                             <i class="bi bi-search"></i>
                         </span>
-                        <input type="text" class="form-control border-start-0 ps-0"
+                        <input type="text" id="busca" class="form-control border-start-0 ps-0"
                             placeholder="Pesquisar no cardápio...">
-                        <button class="btn text-white px-4" type="button"
+                        <button id="btnBuscar" class="btn text-white px-4" type="button"
                             style="background-color: #E67E22;">Buscar</button>
                     </div>
                 </div>
@@ -180,7 +180,7 @@
             <div class="row row-cols-1 row-cols-sm-2 row-cols-lg-4 g-4">
 
 <!-- Produto 1 -->
-                <div class="col">
+                <div class="col" id="item">
                     <div class="card h-100 shadow-sm rounded-4 border-0">
                         <div class="position-relative">
                             <img src="assets/img/hamburguer.jpg"
@@ -903,7 +903,8 @@
 <!--ENtretenimentoooo-->
     <audio id="musica" class="fixed-bottom w-100 h-05" controls autoplay></audio>
 
-    <script src="/assets/js/musicas.js" defer></script>
+    <script src="assets/js/musicas.js" defer></script>
+    <script src="assets/js/script.js" defer></script>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
